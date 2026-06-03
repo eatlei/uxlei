@@ -22,18 +22,28 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     <meta name="generator" content={Astro.generator} />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    <link rel="icon" type="image/png" href={`${base}/favicon.png`} />
+    <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F8FB" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0C0E13" />
 
     <script is:inline>
-      // Pre-paint theme set: read localStorage / fall back to system preference.
+      // Pre-paint setup: flag JS so reveal animations are progressive enhancement
+      // (content stays visible if JS fails), and set theme before paint.
       (() => {
+        const root = document.documentElement;
+        root.classList.add("js");
         try {
           const stored = localStorage.getItem("theme");
           const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
           const dark = stored ? stored === "dark" : prefersDark;
-          if (dark) document.documentElement.classList.add("dark");
+          if (dark) root.classList.add("dark");
+        } catch {}
+        try {
+          // Language preference (UI toggle only; default English).
+          const lang = localStorage.getItem("lang") || "en";
+          root.dataset.lang = lang;
+          root.lang = lang === "zh" ? "zh-CN" : "en";
         } catch {}
       })();
     </script>
@@ -44,5 +54,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       <slot />
     </main>
     <Footer />
+    <script>
+      const root = document.documentElement;
+      function applyLang(lang: string) {
+        root.dataset.lang = lang;
+        root.lang = lang === "zh" ? "zh-CN" : "en";
+        try {
+          localStorage.setItem("lang", lang);
+        } catch {}
+      }
+      document.querySelectorAll("[data-setlang]").forEach((btn) => {
+        btn.addEventListener("click", () =>
+          applyLang(btn.getAttribute("data-setlang") || "en"),
+        );
+      });
+    </script>
   </body>
 </html>

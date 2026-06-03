@@ -1,0 +1,41 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1480" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="0.55" stop-color="#EEF5FF"/>
+      <stop offset="1" stop-color="#D9E9FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" rx="44" fill="url(#bg)"/>
+  <circle cx="228" cy="213" r="157" fill="#FFFFFF" fill-opacity="0.6"/>
+  <circle cx="1376" cy="794" r="224" fill="#7DB9FF" fill-opacity="0.16"/>
+  <circle cx="1178" cy="156" r="102" fill="#FF7387" fill-opacity="0.1"/>
+  <g opacity="0.32">
+    <path d="M138 225H1462" stroke="#3B6FD4" stroke-opacity="0.22"/>
+    <path d="M138 776H1462" stroke="#3B6FD4" stroke-opacity="0.18"/>
+    <path d="M294 128V872" stroke="#3B6FD4" stroke-opacity="0.16"/>
+    <path d="M1306 128V872" stroke="#3B6FD4" stroke-opacity="0.16"/>
+  </g>
+  <g stroke="#3B6FD4" stroke-opacity="0.3" stroke-width="2" fill="none">
+    <path d="M462 266H650L592 392V470L522 508V392L462 266Z"/>
+    <rect x="742" y="244" width="116" height="86" rx="18"/>
+    <rect x="890" y="292" width="116" height="86" rx="18"/>
+    <rect x="742" y="408" width="116" height="86" rx="18"/>
+    <path d="M858 287H890"/>
+    <path d="M948 378V434H858"/>
+    <path d="M604 384C690 384 684 302 742 286"/>
+    <path d="M1036 306C1088 300 1118 324 1128 368C1140 422 1100 470 1037 456"/>
+    <path d="M1078 276V486"/>
+    <path d="M1005 380H1152"/>
+  </g>
+  <g>
+    <circle cx="102" cy="102" r="22" fill="#FFFFFF" fill-opacity="0.9" stroke="#C9D9F3"/>
+    <text x="102" y="110" text-anchor="middle" font-family="Arial, PingFang SC, sans-serif" font-size="18" fill="#5E6675" letter-spacing="1">01</text>
+  </g>
+  <g text-anchor="middle">
+    <text x="800" y="470" font-family="Arial, PingFang SC, sans-serif" font-weight="800" font-size="104" letter-spacing="-2" fill="#14171D">抖音 &amp; TikTok</text>
+    <text x="800" y="530" font-family="Arial, PingFang SC, sans-serif" font-size="34" fill="#5E6675">产品 &amp; 运营设计 · 2025</text>
+    <rect x="660" y="574" width="280" height="64" rx="32" fill="#FFFFFF" fill-opacity="0.82" stroke="#C9D9F3"/>
+    <text x="800" y="615" font-family="Arial, PingFang SC, sans-serif" font-weight="600" font-size="25" letter-spacing="2" fill="#1C55C6">内容待补充</text>
+  </g>
+</svg>

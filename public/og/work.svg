@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#EEF5FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="24" fill="url(#bg)"/>
+  <g opacity="0.35">
+    <path d="M60 80H1140M60 550H1140" stroke="#E3E7EE"/>
+    <path d="M720 70V560" stroke="#E3E7EE"/>
+    <circle cx="1040" cy="140" r="94" fill="#7DB9FF" fill-opacity="0.16"/>
+    <circle cx="218" cy="510" r="118" fill="#FFFFFF" fill-opacity="0.62"/>
+  </g>
+  <text x="60" y="180" font-family="Arial, PingFang SC, sans-serif" font-weight="800" font-size="72" letter-spacing="-1" fill="#14171D">从活动玩法到</text>
+  <text x="60" y="255" font-family="Arial, PingFang SC, sans-serif" font-weight="800" font-size="72" letter-spacing="-1" fill="#14171D">增长系统的设计记录</text>
+  <text x="60" y="310" font-family="Arial, PingFang SC, sans-serif" font-size="22" fill="#5E6675">Leon · 交互 / 产品设计 · 2015–至今</text>
+  <g transform="translate(800 90)">
+    <text x="0" y="72" font-family="Arial, PingFang SC, sans-serif" font-weight="800" font-size="64" fill="#3B6FD4">+771%</text>
+    <text x="0" y="108" font-family="Arial, PingFang SC, sans-serif" font-size="22" fill="#5E6675">端外页回流率</text>
+    <path d="M0 150H340" stroke="#E3E7EE"/>
+    <text x="0" y="226" font-family="Arial, PingFang SC, sans-serif" font-weight="800" font-size="64" fill="#3B6FD4">75%</text>
+    <text x="0" y="262" font-family="Arial, PingFang SC, sans-serif" font-size="22" fill="#5E6675">百度果园活动参与率</text>
+    <path d="M0 304H340" stroke="#E3E7EE"/>
+    <text x="0" y="380" font-family="Arial, PingFang SC, sans-serif" font-weight="800" font-size="64" fill="#3B6FD4">23</text>
+    <text x="0" y="416" font-family="Arial, PingFang SC, sans-serif" font-size="22" fill="#5E6675">长线活动概念方案</text>
+  </g>
+  <text x="60" y="580" font-family="Arial, PingFang SC, sans-serif" font-size="16" letter-spacing="3" fill="#5E6675">WORK · UXLEI.GITHUB.IO/UXLEI</text>
+</svg>

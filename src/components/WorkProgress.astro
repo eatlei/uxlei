@@ -1,0 +1,100 @@
+---
+// Shared "AI 分界" progress rail + live HUD.
+// index mode: era/label track the active section as you scroll.
+// case mode: era/label are fixed to the project; only the % tracks reading.
+interface Props {
+  mode?: "index" | "case";
+  label?: string;
+  era?: "pre-ai" | "post-ai";
+}
+const { mode = "index", label = "", era = "pre-ai" } = Astro.props;
+const eraText = era === "post-ai" ? "AI 后设计" : "AI 前设计";
+---
+
+<div class="work-scroll-progress" data-era={era} aria-hidden="true">
+  <span></span>
+  {mode === "index" && <i class="work-scroll-mark"></i>}
+</div>
+
+<div class="work-hud" data-mode={mode} data-era={era} aria-hidden="true">
+  <span class="work-hud-dot"></span>
+  <span class="work-hud-era">{eraText}</span>
+  {label && <span class="work-hud-sep">·</span>}
+  {label && <span class="work-hud-label">{label}</span>}
+  <span class="work-hud-pct">0%</span>
+</div>
+
+<script is:inline>
+  (() => {
+    const root = document.documentElement;
+    let rail, fill, mark, hud, hudEra, hudPct, mode, before;
+
+    const placeMark = () => {
+      if (!mark || !before) return;
+      const max = document.body.scrollHeight - window.innerHeight;
+      const frac = max > 0 ? before.offsetTop / max : 0;
+      mark.style.left = Math.min(100, Math.max(0, frac * 100)).toFixed(2) + "%";
+    };
+
+    const update = () => {
+      if (!hud) return;
+      const max = document.body.scrollHeight - window.innerHeight;
+      const f = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      root.style.setProperty("--work-scroll", f.toFixed(4));
+      if (fill) fill.style.transform = "scaleX(" + f + ")";
+      if (hudPct) hudPct.textContent = Math.round(f * 100) + "%";
+
+      if (mark && before) {
+        const markFrac = max > 0 ? before.offsetTop / max : 1;
+        mark.classList.toggle("is-passed", f >= markFrac - 0.001);
+      }
+
+      if (mode === "index") {
+        const secs = document.querySelectorAll(".work-section");
+        if (secs.length) {
+          const mid = window.innerHeight * 0.42;
+          let active = secs[0];
+          secs.forEach((s) => {
+            if (s.getBoundingClientRect().top <= mid) active = s;
+          });
+          const activeEra =
+            active.getAttribute("data-section") === "after-ai" ? "post-ai" : "pre-ai";
+          if (rail) rail.setAttribute("data-era", activeEra);
+          hud.setAttribute("data-era", activeEra);
+          if (hudEra)
+            hudEra.textContent = activeEra === "post-ai" ? "AI 后设计" : "AI 前设计";
+        }
+      }
+    };
+
+    const init = () => {
+      rail = document.querySelector(".work-scroll-progress");
+      fill = rail && rail.querySelector("span");
+      mark = document.querySelector(".work-scroll-mark");
+      hud = document.querySelector(".work-hud");
+      hudEra = document.querySelector(".work-hud-era");
+      hudPct = document.querySelector(".work-hud-pct");
+      if (!hud) return;
+      mode = hud.getAttribute("data-mode");
+      before = document.getElementById("before-ai");
+      placeMark();
+      update();
+      hud.classList.add("is-live");
+      window.addEventListener("scroll", update, { passive: true });
+      window.addEventListener("resize", () => {
+        placeMark();
+        update();
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+    window.addEventListener("load", () => {
+      placeMark();
+      update();
+    });
+  })();
+</script>

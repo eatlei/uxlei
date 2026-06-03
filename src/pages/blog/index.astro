@@ -1,49 +1,37 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import PortfolioRail from "@/components/PortfolioRail.astro";
 import { formatDate, withBase } from "@/utils";
 
-const posts = (await getCollection("blog", ({ data }) => !data.draft))
-  .sort((a, b) => +b.data.pubDate - +a.data.pubDate);
-
-const byYear = posts.reduce<Record<string, typeof posts>>((acc, p) => {
-  const y = String(p.data.pubDate.getFullYear());
-  (acc[y] ??= []).push(p);
-  return acc;
-}, {});
-const years = Object.keys(byYear).sort((a, b) => +b - +a);
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => +b.data.pubDate - +a.data.pubDate,
+);
 ---
 
 <BaseLayout title="Blog" description="随笔与思考">
-  <section class="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-28">
-    <h1 class="font-display text-2xl mb-12">Blog</h1>
+  <section class="portfolio-shell blog-directory" aria-labelledby="blog-title">
+    <PortfolioRail active="blog" />
 
-    <div class="max-w-2xl">
-    {years.map((y) => (
-      <div class="mb-10">
-        <h2 class="font-mono text-xs text-[color:var(--muted)] mb-1">{y}</h2>
-        <ul>
-          {byYear[y].map((p) => (
+    <main class="portfolio-main">
+      <header class="blog-directory-hero">
+        <p class="portfolio-kicker" id="blog-title">BLOG</p>
+      </header>
+
+      {posts.length > 0 ? (
+        <ol class="portfolio-post-list blog-post-list">
+          {posts.map((post) => (
             <li>
-              <a
-                href={withBase(`/blog/${p.id}`)}
-                class="group flex items-baseline justify-between gap-6 py-2.5 px-3 -mx-3 rounded-md hover:bg-[color-mix(in_oklab,var(--color-accent)_8%,transparent)] transition-colors"
-              >
-                <span class="text-lg leading-snug group-hover:text-[color:var(--color-accent)] transition-colors">
-                  {p.data.title}
-                </span>
-                <span class="font-mono text-xs text-[color:var(--muted)] shrink-0 tabular-nums">
-                  {formatDate(p.data.pubDate)}
-                </span>
+              <a href={withBase(`/blog/${post.id}`)}>
+                <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+                <span>{post.data.title}</span>
               </a>
             </li>
           ))}
-        </ul>
-      </div>
-    ))}
-    {posts.length === 0 && (
-      <p class="text-[color:var(--muted)]">还没有文章。</p>
-    )}
-    </div>
+        </ol>
+      ) : (
+        <p class="portfolio-empty">还没有文章。</p>
+      )}
+    </main>
   </section>
 </BaseLayout>

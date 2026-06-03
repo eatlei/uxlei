@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import PortfolioRail from "@/components/PortfolioRail.astro";
 import { formatDate, withBase } from "@/utils";
 
 export async function getStaticPaths() {
@@ -10,39 +11,36 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const { title, description, pubDate, updatedDate, tags } = entry.data;
 ---
 
-<BaseLayout title={entry.data.title} description={entry.data.description ?? entry.data.title}>
-  <article class="mx-auto max-w-3xl px-6 pt-16 pb-24 md:pt-24">
-    <a href={withBase("/blog")} class="text-sm text-[color:var(--muted)] hover:text-[color:var(--fg)] inline-flex items-center gap-1 mb-8">
-      <span aria-hidden="true">←</span> 所有文章
-    </a>
+<BaseLayout title={title} description={description ?? title}>
+  <section class="portfolio-shell blog-article" aria-labelledby="article-title">
+    <PortfolioRail active="blog" />
 
-    <p class="font-mono text-xs uppercase tracking-wider text-[color:var(--muted)] mb-4">
-      {formatDate(entry.data.pubDate)}
-      {entry.data.updatedDate && <> · 更新于 {formatDate(entry.data.updatedDate)}</>}
-    </p>
+    <main class="portfolio-main">
+      <a class="portfolio-kicker article-back" href={withBase("/blog")}>← BLOG</a>
 
-    <h1 class="font-display text-4xl md:text-5xl leading-[1.15] tracking-tight mb-6">
-      {entry.data.title}
-    </h1>
+      <article class="article-page">
+        <header class="article-head">
+          <p class="article-meta">
+            <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+            {updatedDate && <span>· 更新于 {formatDate(updatedDate)}</span>}
+          </p>
+          <h1 id="article-title">{title}</h1>
+          {description && <p class="article-lede">{description}</p>}
+        </header>
 
-    {entry.data.description && (
-      <p class="text-lg text-[color:var(--muted)] mb-10 leading-relaxed border-l-2 border-[color:var(--color-accent)] pl-4">
-        {entry.data.description}
-      </p>
-    )}
+        <div class="prose-page">
+          <Content />
+        </div>
 
-    <div class="prose-page">
-      <Content />
-    </div>
-
-    {entry.data.tags.length > 0 && (
-      <div class="mt-12 pt-6 border-t border-[color:var(--rule)] flex flex-wrap gap-2 text-xs">
-        {entry.data.tags.map((t) => (
-          <span class="px-2.5 py-1 rounded-full border border-[color:var(--rule)] text-[color:var(--muted)]">#{t}</span>
-        ))}
-      </div>
-    )}
-  </article>
+        {tags.length > 0 && (
+          <ul class="article-tags" aria-label="Tags">
+            {tags.map((t) => <li>#{t}</li>)}
+          </ul>
+        )}
+      </article>
+    </main>
+  </section>
 </BaseLayout>

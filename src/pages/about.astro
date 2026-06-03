@@ -1,14 +1,21 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import SocialLinks from "@/components/SocialLinks.astro";
+import PortfolioRail from "@/components/PortfolioRail.astro";
 ---
 
-<BaseLayout title="About">
-  <section class="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-28">
-    <h1 class="font-display text-4xl md:text-6xl tracking-tight leading-[1.1] mb-8">
-      我是 Leon，一名<span class="text-[color:var(--color-accent)]">设计师</span>。
-    </h1>
+<BaseLayout title="Info" description="关于 Leon">
+  <section class="portfolio-shell info-directory" aria-labelledby="info-title">
+    <PortfolioRail active="info" />
 
-    <SocialLinks />
+    <main class="portfolio-main">
+      <header class="home-intro">
+        <p class="portfolio-kicker">INFO</p>
+        <h1 id="info-title">我是 Leon，一名设计师。</h1>
+        <p>
+          专注产品策略、交互设计、增长系统与运营设计。<br />
+          做过百度、美团、字节跳动的产品与运营设计。
+        </p>
+      </header>
+    </main>
   </section>
 </BaseLayout>

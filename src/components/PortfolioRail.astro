@@ -1,0 +1,35 @@
+---
+import { withBase } from "@/utils";
+
+interface Props {
+  active?: "index" | "blog" | "work" | "info";
+}
+const { active = "index" } = Astro.props;
+const on = (key: Props["active"]) => (active === key ? "is-active" : undefined);
+---
+
+<aside class="portfolio-rail" aria-label="Section navigation">
+  <a class="portfolio-brand" href={withBase("/")}>LEON.<br />GUO</a>
+
+  <nav class="portfolio-switch" aria-label="Section switch">
+    <a class={on("index")} href={withBase("/")}>Index</a>
+    <a class={on("blog")} href={withBase("/blog")}>Blog</a>
+    <a class={on("work")} href={withBase("/work")}>Work</a>
+  </nav>
+
+  <div class="portfolio-foot">
+    <nav class="portfolio-side-links" aria-label="Profile links">
+      <a class={on("info")} href={withBase("/about")}>Info</a>
+      <a href="mailto:leonguooct@gmail.com">Email</a>
+      <a href="https://x.com/littlechaihu">X</a>
+    </nav>
+
+    <div class="portfolio-lang" role="group" aria-label="Language">
+      <button type="button" data-setlang="en">EN</button>
+      <span aria-hidden="true">/</span>
+      <button type="button" data-setlang="zh">中</button>
+    </div>
+
+    <p class="portfolio-copy">GL © 2026</p>
+  </div>
+</aside>
