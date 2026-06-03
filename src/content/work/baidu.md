@@ -4,7 +4,7 @@ summary: 两段百度经历，专注大事件与用户增长玩法、长线活�
 role: 产品 / 运营 / 交互设计
 year: "2015 · 2020–2022"
 client: 百度
-cover: /uxlei/work/covers/baidu-case.svg
+cover: /work/covers/baidu-case.svg
 tags:
   - 增长设计
   - 长线活动
@@ -33,7 +33,7 @@ draft: false
 
 我以「利益」为核心，用八角行为模型（Octalysis）拆解活动标题与主页结构，把使命、授权、拥有、稀缺、成就、亏损、未知、社交八类心理动机，分别映射到主标题区、利益刺激区与主操作区，重构出 2020 版主页——更大的金额、进度条与计时动效强化即时利益，"邀新用户最高得 3 元"把社交动机前置。
 
-<div class="devices"><figure><img loading="lazy" decoding="async" src="/uxlei/work/shots/hongbao-before.jpg" alt="2018 红包裂变活动主页"><figcaption>2018 旧版主页</figcaption></figure><figure><img loading="lazy" decoding="async" src="/uxlei/work/shots/hongbao-after.jpg" alt="2020 红包裂变活动主页"><figcaption>2020 新版主页 · 八角模型重构</figcaption></figure></div>
+<div class="devices"><figure><img loading="lazy" decoding="async" src="/work/shots/hongbao-before.jpg" alt="2018 红包裂变活动主页"><figcaption>2018 旧版主页</figcaption></figure><figure><img loading="lazy" decoding="async" src="/work/shots/hongbao-after.jpg" alt="2020 红包裂变活动主页"><figcaption>2020 新版主页 · 八角模型重构</figcaption></figure></div>
 
 ### 应对微信封禁，打通通讯录
 
@@ -43,7 +43,7 @@ draft: false
 
 把同一套裂变玩法抽象为「红包+」，复用到三类场景：红包 + 大事件（精简入口作为流量补充）、红包 + 垂类（结合垂类特性设计参与路径）、红包 + 热点（高效复用、数据验证调优），让增长漏斗在横向和纵向同时变宽。
 
-<div class="devices"><figure><img loading="lazy" decoding="async" src="/uxlei/work/shots/hongbao-event.jpg" alt="红包 + 大事件：城市寻宝"><figcaption>红包 + 大事件</figcaption></figure><figure><img loading="lazy" decoding="async" src="/uxlei/work/shots/hongbao-vertical.jpg" alt="红包 + 垂类：百度小说"><figcaption>红包 + 垂类</figcaption></figure><figure><img loading="lazy" decoding="async" src="/uxlei/work/shots/hongbao-hotspot.jpg" alt="红包 + 热点：开学季"><figcaption>红包 + 热点</figcaption></figure></div>
+<div class="devices"><figure><img loading="lazy" decoding="async" src="/work/shots/hongbao-event.jpg" alt="红包 + 大事件：城市寻宝"><figcaption>红包 + 大事件</figcaption></figure><figure><img loading="lazy" decoding="async" src="/work/shots/hongbao-vertical.jpg" alt="红包 + 垂类：百度小说"><figcaption>红包 + 垂类</figcaption></figure><figure><img loading="lazy" decoding="async" src="/work/shots/hongbao-hotspot.jpg" alt="红包 + 热点：开学季"><figcaption>红包 + 热点</figcaption></figure></div>
 
 <div class="kpis"><div class="kpi"><b>+163%</b><span>分享率提升</span></div><div class="kpi"><b>+771%</b><span>端外页回流率提升</span></div><div class="kpi"><b>7.7%</b><span>通讯录分享新用户占比</span></div></div>
 
@@ -51,7 +51,7 @@ draft: false
 
 从设计百度第一款长线活动「百变人生」，到落地成熟长线玩法「百度果园」。我提炼出「洞察—脑暴—概念—落地」四步创新方法，并以百变人生为基础沉淀出一套可复用的「长线玩法模型」：世界观（养成内容 / 过程 / 结果）+ 任务（单一 / 多样、邀请 / 分享 / 签到）+ 目标（利益刺激 / 环保公益 / 成就感）三层结构，支撑活动在 2 个月内以 APP 量级上线。
 
-<div class="devices"><figure><img loading="lazy" decoding="async" src="/uxlei/work/shots/changxian-bbrs.jpg" alt="2020 百变人生活动主页"><figcaption>2020 百变人生</figcaption></figure><figure><img loading="lazy" decoding="async" src="/uxlei/work/shots/changxian-guoyuan.jpg" alt="2021 百度果园活动主页"><figcaption>2021 百度果园 · 复用长线模型</figcaption></figure></div>
+<div class="devices"><figure><img loading="lazy" decoding="async" src="/work/shots/changxian-bbrs.jpg" alt="2020 百变人生活动主页"><figcaption>2020 百变人生</figcaption></figure><figure><img loading="lazy" decoding="async" src="/work/shots/changxian-guoyuan.jpg" alt="2021 百度果园活动主页"><figcaption>2021 百度果园 · 复用长线模型</figcaption></figure></div>
 
 ### 果园破局：从 30 万到回升
 
@@ -71,13 +71,13 @@ draft: false
 
 把红包弹窗 → 登录 → 领取成功的新人路径前置到端页面，更早触达用户；并将提现、红包福利前置，用利益把用户留住。交互路径持续缩短、利益更明确，迭代节奏从 V1.2 一路推进到 V2.0。
 
-<figure class="wide"><img loading="lazy" decoding="async" src="/uxlei/work/shots/renwu-evolution.jpg" alt="任务系统 V1.2 到 V2.0 的版本演进与百度 Lite 用户增长曲线"><figcaption>V1.2 → V2.0 版本演进，对应百度 Lite App 用户增长曲线</figcaption></figure>
+<figure class="wide"><img loading="lazy" decoding="async" src="/work/shots/renwu-evolution.jpg" alt="任务系统 V1.2 到 V2.0 的版本演进与百度 Lite 用户增长曲线"><figcaption>V1.2 → V2.0 版本演进，对应百度 Lite App 用户增长曲线</figcaption></figure>
 
 ### 向下拆解：28 个模块协同提效
 
 把任务系统拆解为 28 个独立模块（提现兑换、师徒拉新、签到、Feed / 搜索任务等），作为项目带头人分配给团队成员合力创新，高效支持业务需求。
 
-<div class="devices"><figure><img loading="lazy" decoding="async" src="/uxlei/work/shots/renwu-main.jpg" alt="任务系统 2.0 主页"><figcaption>任务系统 2.0 主页</figcaption></figure></div>
+<div class="devices"><figure><img loading="lazy" decoding="async" src="/work/shots/renwu-main.jpg" alt="任务系统 2.0 主页"><figcaption>任务系统 2.0 主页</figcaption></figure></div>
 
 <div class="kpis"><div class="kpi"><b>2 天</b><span>完成 28 个模块交互稿</span></div><div class="kpi"><b>2 个月</b><span>完成 V1.2 → V2.0 迭代</span></div></div>
 

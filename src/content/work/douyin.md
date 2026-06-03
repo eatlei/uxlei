@@ -4,7 +4,7 @@ summary: 字节跳动 · 抖音 & TikTok 的产品与运营设计。在职项目
 role: 产品 & 运营设计
 year: "2025"
 client: 抖音 & TikTok
-cover: /uxlei/work/covers/douyin-case.svg
+cover: /work/covers/douyin-case.svg
 tags:
   - 产品设计
   - 运营设计
