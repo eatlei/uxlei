@@ -4,7 +4,7 @@ summary: 字节跳动 · TikTok 的产品与运营设计。在职项目,细节�
 role: 产品 & 运营设计
 year: "进行中"
 client: TikTok
-cover: /uxlei/work/covers/tiktok-case.svg
+cover: /work/covers/tiktok-case.svg
 tags:
   - AI
   - 产品设计

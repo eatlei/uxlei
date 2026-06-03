@@ -19,8 +19,8 @@ function rehypeLazyImages() {
 }
 
 export default defineConfig({
-  site: 'https://eatlei.github.io',
-  base: '/uxlei',
+  site: 'https://thisleon.com',
+  base: '/',
   trailingSlash: 'ignore',
   integrations: [sitemap()],
   vite: {
