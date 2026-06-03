@@ -1,0 +1,32 @@
+<svg width="320" height="280" viewBox="0 0 320 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-40" y="-40" width="400" height="360" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#1C355E" flood-opacity=".18"/>
+    </filter>
+    <linearGradient id="phone" x1="72" y1="38" x2="245" y2="223" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#202D45"/>
+      <stop offset="1" stop-color="#09111F"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="102" y1="73" x2="219" y2="202" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9FCFF" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#CDE6FF" stop-opacity=".36"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M106 40h118c13 0 24 11 24 24v142c0 13-11 24-24 24H106c-13 0-24-11-24-24V64c0-13 11-24 24-24Z" fill="url(#phone)"/>
+    <path d="M98 65c0-7 6-13 13-13h108c7 0 13 6 13 13v133c0 7-6 13-13 13H111c-7 0-13-6-13-13V65Z" fill="url(#glass)" opacity=".1"/>
+    <path d="M118 92h92v4h-92zM118 184h68v4h-68z" fill="#fff" opacity=".16"/>
+    <path d="M156 108c20 0 37 16 37 37s-17 37-37 37-37-16-37-37 17-37 37-37Z" fill="#fff" opacity=".08"/>
+    <path d="M160 116v38c0 16-12 28-28 28-9 0-17-4-22-11l15-13c2 3 4 5 8 5 5 0 8-4 8-9v-56h19Z" fill="#4F7EE8"/>
+    <path d="M160 116c10 19 24 29 42 31v18c-18-1-32-8-42-20v-29Z" fill="#20C8D2"/>
+    <path d="M149 98c0-5 4-9 9-9h7v27h-16V98Z" fill="#FF5F7C"/>
+  </g>
+  <path d="M65 119c-22 3-38 12-46 29 20 0 36 7 48 21 6-15 5-31-2-50Z" fill="#E9BC43"/>
+  <path d="M255 78c21 5 36 16 46 32-18 4-32 13-42 27-8-17-9-36-4-59Z" fill="#30BFC7"/>
+  <path d="M224 215c15 5 27 14 35 27-14 3-25 10-33 21-7-13-8-29-2-48Z" fill="#4F7EE8"/>
+  <circle cx="82" cy="196" r="17" fill="#F5F7FB" stroke="#D9E0EA"/>
+  <circle cx="82" cy="196" r="7" fill="#4F7EE8"/>
+  <circle cx="236" cy="54" r="6" fill="#20C8D2"/>
+  <path d="M255 39h13v13h-13z" fill="#E9BC43" transform="rotate(18 255 39)"/>
+  <path d="M58 71h11v11H58z" fill="#FF6B7F" transform="rotate(-16 58 71)"/>
+</svg>

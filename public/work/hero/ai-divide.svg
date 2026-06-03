@@ -1,0 +1,45 @@
+<svg width="2400" height="1000" viewBox="0 0 2400 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="divide" x1="1100" y1="0" x2="1300" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14171D" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#3B6FD4" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#3B6FD4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#14171D" stroke-opacity="0.12" stroke-width="1" fill="none">
+    <rect x="122" y="112" width="176" height="116" rx="18"/>
+    <path d="M158 162H264M158 192H234"/>
+    <rect x="408" y="174" width="132" height="180" rx="20"/>
+    <path d="M438 224H510M438 258H492M438 292H516"/>
+    <path d="M670 130H850L790 258V352L730 386V258L670 130Z"/>
+    <rect x="92" y="514" width="210" height="128" rx="22"/>
+    <circle cx="152" cy="578" r="22"/>
+    <path d="M196 552H266M196 588H246"/>
+    <path d="M432 546C536 498 610 512 704 594C780 660 852 646 940 574"/>
+    <path d="M432 546L470 540M704 594L740 598M940 574L910 592"/>
+    <rect x="802" y="436" width="184" height="116" rx="20"/>
+    <path d="M838 490H950M838 522H914"/>
+    <circle cx="1060" cy="206" r="44"/>
+    <path d="M1028 206H1092M1060 174V238"/>
+    <path d="M140 788H368M194 732V844M304 746V830"/>
+    <path d="M520 780H994"/>
+    <path d="M580 740V820M674 724V836M768 748V812M862 714V846M956 744V816"/>
+  </g>
+  <rect x="1100" width="200" height="1000" fill="url(#divide)"/>
+  <g stroke="#3B6FD4" stroke-opacity="0.12" stroke-width="1" fill="none">
+    <path d="M1390 160H2260M1390 300H2260M1390 440H2260M1390 580H2260M1390 720H2260"/>
+    <path d="M1460 90V790M1600 90V790M1740 90V790M1880 90V790M2020 90V790M2160 90V790"/>
+    <circle cx="1460" cy="300" r="16"/>
+    <circle cx="1600" cy="160" r="12"/>
+    <circle cx="1740" cy="440" r="18"/>
+    <circle cx="1880" cy="300" r="10"/>
+    <circle cx="2020" cy="580" r="16"/>
+    <circle cx="2160" cy="440" r="13"/>
+    <path d="M1460 300L1600 160L1740 440L1880 300L2020 580L2160 440"/>
+    <path d="M1530 720C1640 638 1760 642 1880 720C2000 798 2126 790 2240 700"/>
+    <rect x="1360" y="824" width="250" height="78" rx="18"/>
+    <rect x="1668" y="824" width="250" height="78" rx="18"/>
+    <rect x="1976" y="824" width="250" height="78" rx="18"/>
+    <path d="M1610 863H1668M1918 863H1976"/>
+  </g>
+</svg>

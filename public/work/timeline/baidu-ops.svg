@@ -1,0 +1,27 @@
+<svg width="320" height="280" viewBox="0 0 320 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="soft" x="-40" y="-40" width="400" height="360" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="17" flood-color="#163769" flood-opacity=".16"/>
+    </filter>
+    <radialGradient id="medal" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(164 134) rotate(90) scale(72)">
+      <stop stop-color="#fff"/>
+      <stop offset=".58" stop-color="#D8DEE8"/>
+      <stop offset="1" stop-color="#AAB3C1"/>
+    </radialGradient>
+  </defs>
+  <path d="M157 38c-26 30-39 63-39 99s13 69 39 99c26-30 39-63 39-99S183 68 157 38Z" fill="#4F7EE8" opacity=".9"/>
+  <path d="M118 60c20 12 38 28 54 50-9 20-11 43-5 68-25-22-45-48-60-78 2-14 5-27 11-40Z" fill="#22C7C9"/>
+  <g filter="url(#soft)">
+    <circle cx="165" cy="139" r="74" fill="url(#medal)"/>
+    <circle cx="165" cy="139" r="55" stroke="#F8FAFF" stroke-width="2" opacity=".72"/>
+    <path d="M165 86l11 34 35 1-28 20 10 34-28-21-28 21 10-34-28-20 35-1 11-34Z" fill="#F4F6FA"/>
+    <path d="M132 215l-19 42 40-19 12-28-33 5Z" fill="#E7B74B"/>
+    <path d="M198 215l19 42-40-19-12-28 33 5Z" fill="#4F7EE8"/>
+  </g>
+  <path d="M45 93c24-28 62-41 115-39" stroke="#183B78" stroke-width="3" stroke-linecap="round" opacity=".18"/>
+  <path d="M237 84c21 16 33 36 36 60" stroke="#183B78" stroke-width="3" stroke-linecap="round" opacity=".18"/>
+  <path d="M58 188c22 5 37 15 46 30-17 2-31 9-42 22-7-15-8-33-4-52Z" fill="#FF7B48"/>
+  <path d="M237 53h22v22h-22z" fill="#E7B74B" transform="rotate(12 237 53)"/>
+  <circle cx="81" cy="69" r="8" fill="#25BFC6"/>
+  <circle cx="257" cy="202" r="5" fill="#4F7EE8"/>
+</svg>

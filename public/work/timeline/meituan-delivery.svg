@@ -1,0 +1,26 @@
+<svg width="320" height="280" viewBox="0 0 320 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="drop" x="-40" y="-40" width="400" height="360" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="17" flood-color="#2C3D59" flood-opacity=".16"/>
+    </filter>
+    <linearGradient id="bag" x1="99" y1="68" x2="224" y2="218" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE08A"/>
+      <stop offset="1" stop-color="#F4B640"/>
+    </linearGradient>
+  </defs>
+  <path d="M60 91c35-17 65-19 91-6 26 13 56 15 91 6-9 29-28 51-57 66-29 14-62 18-99 11-5-27-14-53-26-77Z" fill="#4F7EE8" opacity=".16"/>
+  <g filter="url(#drop)">
+    <path d="M100 101c0-15 12-27 27-27h76c15 0 27 12 27 27v92c0 15-12 27-27 27h-76c-15 0-27-12-27-27v-92Z" fill="url(#bag)"/>
+    <path d="M133 75c2-23 16-35 32-35s30 12 32 35" stroke="#2D3441" stroke-width="10" stroke-linecap="round"/>
+    <path d="M120 128h91M120 158h72" stroke="#2D3441" stroke-opacity=".24" stroke-width="8" stroke-linecap="round"/>
+    <path d="M199 104c16 7 28 19 34 37-18 0-33 7-45 20-3-20 0-39 11-57Z" fill="#2CC3C7"/>
+  </g>
+  <circle cx="101" cy="207" r="28" fill="#F5F7FB" stroke="#DDE4EE"/>
+  <circle cx="101" cy="207" r="11" fill="#4F7EE8"/>
+  <circle cx="236" cy="204" r="22" fill="#F5F7FB" stroke="#DDE4EE"/>
+  <circle cx="236" cy="204" r="8" fill="#4F7EE8"/>
+  <path d="M118 207h93" stroke="#2D3441" stroke-opacity=".28" stroke-width="8" stroke-linecap="round"/>
+  <path d="M75 54h22v22H75z" fill="#F06462" transform="rotate(-14 75 54)"/>
+  <path d="M245 68h20v20h-20z" fill="#48C4C9" transform="rotate(18 245 68)"/>
+  <path d="M43 162c18-3 33 0 45 11-13 8-21 19-25 34-13-11-20-26-20-45Z" fill="#E7B74B"/>
+</svg>
