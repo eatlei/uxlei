@@ -4,7 +4,7 @@ export const SITE = {
   description: "设计作品集与博客。",
   url: "https://eatlei.github.io/uxlei",
   author: "Leon",
-  email: "leonguooct@gmail.com",
+  email: "hi@thisleon.com",
   x: "https://x.com/littlechaihu",
 };
 
