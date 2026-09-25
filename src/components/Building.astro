@@ -1,0 +1,149 @@
+---
+// Full-screen "under construction" splash shown site-wide when
+// MAINTENANCE is on (see src/consts.ts + BaseLayout.astro). Self-contained:
+// its own markup + scoped styles, on-brand with the pixel wordmark and the
+// accent → signal → heat palette.
+---
+
+<div class="building">
+  <div class="building__inner">
+    <p class="building__mark">LEON</p>
+
+    <!-- Stacking bricks: blocks rise into place on a loop. -->
+    <div class="building__stack" aria-hidden="true">
+      {Array.from({ length: 12 }).map((_, i) => (
+        <span class="building__brick" style={`--i:${i}`}></span>
+      ))}
+    </div>
+
+    <p class="building__status">
+      <span class="building__label" data-en>BUILDING SOMETHING</span>
+      <span class="building__label" data-zh>建设中</span>
+      <span class="building__dots"><i>.</i><i>.</i><i>.</i></span>
+    </p>
+
+    <div class="building__bar" aria-hidden="true"><span></span></div>
+  </div>
+</div>
+
+<style>
+  .building {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background:
+      radial-gradient(circle at 50% 32%, color-mix(in oklab, var(--signal) 14%, transparent), transparent 20rem),
+      linear-gradient(112deg, color-mix(in oklab, var(--dirty) 26%, transparent), transparent 40rem),
+      radial-gradient(circle at 86% 16%, color-mix(in oklab, var(--heat) 16%, transparent), transparent 22rem),
+      var(--bg);
+    color: var(--fg);
+  }
+
+  .building__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+  }
+
+  .building__mark {
+    font-family: "Jersey 25", var(--font-sans);
+    font-size: clamp(3.4rem, 12vw, 7rem);
+    line-height: 0.9;
+    letter-spacing: 0.06em;
+    color: var(--fg);
+    text-shadow: 0 0 30px color-mix(in oklab, var(--color-accent) 30%, transparent);
+  }
+
+  /* Bricks */
+  .building__stack {
+    display: flex;
+    gap: 6px;
+    height: 44px;
+    align-items: flex-end;
+  }
+  .building__brick {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    background: linear-gradient(180deg, var(--color-accent), var(--signal));
+    box-shadow: 0 0 12px color-mix(in oklab, var(--signal) 45%, transparent);
+    opacity: 0;
+    transform: translateY(-18px) scale(0.7);
+    animation: brick-rise 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    animation-delay: calc(var(--i) * 0.12s);
+  }
+  .building__brick:nth-child(3n) {
+    background: linear-gradient(180deg, var(--signal), var(--heat));
+  }
+
+  @keyframes brick-rise {
+    0% { opacity: 0; transform: translateY(-18px) scale(0.7); }
+    18% { opacity: 1; transform: translateY(0) scale(1); }
+    70% { opacity: 1; transform: translateY(0) scale(1); }
+    88%, 100% { opacity: 0; transform: translateY(10px) scale(0.85); }
+  }
+
+  /* Status line */
+  .building__status {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .building__label { display: none; }
+  :root[data-lang="zh"] .building__label[data-zh] { display: inline; letter-spacing: 0.32em; }
+  :root:not([data-lang="zh"]) .building__label[data-en] { display: inline; }
+  /* Fallback before the pre-paint lang script runs: show English. */
+  :root:not([data-lang]) .building__label[data-en] { display: inline; }
+
+  .building__dots i {
+    display: inline-block;
+    animation: dot 1.4s infinite;
+  }
+  .building__dots i:nth-child(2) { animation-delay: 0.2s; }
+  .building__dots i:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes dot {
+    0%, 60%, 100% { opacity: 0.2; }
+    30% { opacity: 1; }
+  }
+
+  /* Indeterminate progress bar */
+  .building__bar {
+    width: min(260px, 70vw);
+    height: 3px;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--fg) 8%, transparent);
+    overflow: hidden;
+  }
+  .building__bar span {
+    display: block;
+    height: 100%;
+    width: 40%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-accent), var(--signal) 55%, var(--heat));
+    box-shadow: 0 0 14px color-mix(in oklab, var(--signal) 50%, transparent);
+    animation: sweep 1.6s ease-in-out infinite;
+  }
+  @keyframes sweep {
+    0% { transform: translateX(-120%); }
+    100% { transform: translateX(360%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .building__brick,
+    .building__dots i,
+    .building__bar span {
+      animation: none;
+    }
+    .building__brick { opacity: 1; transform: none; }
+    .building__bar span { width: 100%; transform: none; }
+  }
+</style>
