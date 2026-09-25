@@ -22,7 +22,11 @@
       <span class="building__dots"><i>.</i><i>.</i><i>.</i></span>
     </p>
 
-    <div class="building__bar" aria-hidden="true"><span></span></div>
+    <nav class="building__links" aria-label="Other sites">
+      <a href="https://eatlei.github.io/eon-site/" target="_blank" rel="noopener">EON</a>
+      <span class="building__sep" aria-hidden="true">·</span>
+      <a href="https://eatlei.github.io/coast-site/" target="_blank" rel="noopener">Coast</a>
+    </nav>
   </div>
 </div>
 
@@ -115,35 +119,36 @@
     30% { opacity: 1; }
   }
 
-  /* Indeterminate progress bar */
-  .building__bar {
-    width: min(260px, 70vw);
-    height: 3px;
-    border-radius: 999px;
-    background: color-mix(in oklab, var(--fg) 8%, transparent);
-    overflow: hidden;
+  /* Links to other sites */
+  .building__links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
   }
-  .building__bar span {
-    display: block;
-    height: 100%;
-    width: 40%;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--color-accent), var(--signal) 55%, var(--heat));
-    box-shadow: 0 0 14px color-mix(in oklab, var(--signal) 50%, transparent);
-    animation: sweep 1.6s ease-in-out infinite;
+  .building__links a {
+    color: var(--fg);
+    padding-bottom: 2px;
+    border-bottom: 1px solid color-mix(in oklab, var(--fg) 24%, transparent);
+    transition: color 0.18s ease, border-color 0.18s ease;
   }
-  @keyframes sweep {
-    0% { transform: translateX(-120%); }
-    100% { transform: translateX(360%); }
+  .building__links a:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+  .building__sep {
+    color: var(--muted);
+    opacity: 0.6;
   }
 
   @media (prefers-reduced-motion: reduce) {
     .building__brick,
-    .building__dots i,
-    .building__bar span {
+    .building__dots i {
       animation: none;
     }
     .building__brick { opacity: 1; transform: none; }
-    .building__bar span { width: 100%; transform: none; }
   }
 </style>
