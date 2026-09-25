@@ -1,3 +1,8 @@
+// Maintenance mode: when true, every route renders only the full-screen
+// "building" splash (src/components/Building.astro). All real content stays
+// in the repo and is simply not rendered. Flip to false to restore the site.
+export const MAINTENANCE = true;
+
 export const SITE = {
   name: "Leon",
   title: "Leon — Designer",
