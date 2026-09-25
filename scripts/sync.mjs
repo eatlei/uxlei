@@ -16,8 +16,8 @@ const VAULT = path.join(PROJECT_ROOT, "uxlei");
 const BLOG_OUT = path.join(PROJECT_ROOT, "src", "content", "blog");
 const IMG_OUT = path.join(PROJECT_ROOT, "public", "blog");
 
-// 网站部署在子路径下，图片绝对路径要带上它。来源：astro.config.mjs 的 base 字段。
-const BASE = "/uxlei";
+// 图片绝对路径要带上站点 base。网站已迁到自定义域名 thisleon.com，base 为根 "/"，所以这里留空。
+const BASE = "";
 
 const IMG_EXT = new Set([".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".avif", ".bmp"]);
 
